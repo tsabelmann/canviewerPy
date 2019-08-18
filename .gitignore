@@ -1,0 +1,3 @@
+*.pyc
+*.glade~
+gtkmm/__pycache__/

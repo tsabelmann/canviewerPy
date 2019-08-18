@@ -1,0 +1,5 @@
+can
+cantools
+pycairo
+PyGObject
+argparse

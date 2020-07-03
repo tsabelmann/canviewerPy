@@ -1,18 +1,13 @@
-import gi
-gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk
-
+from canviewer.gui import GLADE_UI_PATH
+from canviewer.gui import Gtk
 
 class TabBox(Gtk.Box):
-    def __new__(cls):
-        try:
-            builder = Gtk.Builder()
-            builder.add_from_file("window.glade")
-        except:
-            print("Failed to load XML GUI file window.glade")
-    
+    def __new__(cls, *args, **kwargs):
+        builder = Gtk.Builder()
+        builder.add_from_file(GLADE_UI_PATH)
+
         box = builder.get_object("box")
-        box.__class__ = TabBox
+        box.__class__ = cls
 
         box.init_components(builder)
         box.init_signals()

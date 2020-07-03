@@ -1,3 +1,10 @@
+# Python
 *.pyc
+__pycache__
+
+# Pipfile
+Pipfile
+Pipfile.lock
+
+# Glade / gtkmm
 *.glade~
-gtkmm/__pycache__/

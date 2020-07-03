@@ -1,21 +1,18 @@
-import gi
-gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk
+from canviewer.gui import GLADE_UI_PATH
+from canviewer.gui import Gtk
 
-from gtkmm.TabBox import TabBox
-from gtkmm.EcapAboutDialog import EcapAboutDialog
+from canviewer.gui.TabBox import TabBox
+from canviewer.gui.EcapAboutDialog import EcapAboutDialog
 
 class MainWindow(Gtk.Window):
-    def __new__(cls):
-        try:
-            builder = Gtk.Builder()
-            builder.add_from_file("window.glade")
-        except:
-            print("Failed to load XML GUI file window.glade")
-    
+    def __new__(cls, *args, **kwargs):
+        # Create Builder
+        builder = Gtk.Builder()
+        builder.add_from_file(GLADE_UI_PATH)
+
         # Get Window Widget
         window = builder.get_object("window")
-        window.__class__ = MainWindow
+        window.__class__ = cls
 
         # Initialize Components
         window.init_components(builder)

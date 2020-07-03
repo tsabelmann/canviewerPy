@@ -28,45 +28,6 @@ Martin Pruscha
   <!-- interface-license-type gplv3 -->
   <!-- interface-name canviewer v2 -->
   <!-- interface-authors Tim Lucas Sabelmann\nMartin Pruscha -->
-  <object class="GtkAboutDialog" id="about_dialog">
-    <property name="can_focus">False</property>
-    <property name="window_position">center</property>
-    <property name="type_hint">dialog</property>
-    <property name="program_name">canviewerPy</property>
-    <property name="copyright" translatable="yes">This software is the property of the E-Cap Mobility GmbH and Tim Lucas Sabelmann</property>
-    <property name="comments" translatable="yes">A program to show CAN bus messages in real-time</property>
-    <property name="website">https://ecap-mobility.com</property>
-    <property name="website_label" translatable="yes">E-Cap Mobility GmbH</property>
-    <property name="authors">Tim Lucas Sabelmann
-Martin Pruscha</property>
-    <property name="documenters">Tim Lucas Sabelmann</property>
-    <property name="logo">ecap_logo.svg</property>
-    <property name="license_type">mit-x11</property>
-    <child>
-      <placeholder/>
-    </child>
-    <child internal-child="vbox">
-      <object class="GtkBox">
-        <property name="can_focus">False</property>
-        <property name="orientation">vertical</property>
-        <property name="spacing">2</property>
-        <child internal-child="action_area">
-          <object class="GtkButtonBox">
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
-            <property name="position">0</property>
-          </packing>
-        </child>
-        <child>
-          <placeholder/>
-        </child>
-      </object>
-    </child>
-  </object>
   <object class="GtkBox" id="box">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -142,42 +103,7 @@ Martin Pruscha</property>
       </packing>
     </child>
     <child>
-      <object class="GtkPaned">
-        <property name="visible">True</property>
-        <property name="can_focus">True</property>
-        <child>
-          <object class="GtkScrolledWindow">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="shadow_type">in</property>
-            <child>
-              <object class="GtkTreeView">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <child internal-child="selection">
-                  <object class="GtkTreeSelection"/>
-                </child>
-              </object>
-            </child>
-          </object>
-          <packing>
-            <property name="resize">False</property>
-            <property name="shrink">True</property>
-          </packing>
-        </child>
-        <child>
-          <placeholder/>
-        </child>
-      </object>
-      <packing>
-        <property name="expand">True</property>
-        <property name="fill">True</property>
-        <property name="position">1</property>
-      </packing>
-    </child>
-    <child>
       <object class="GtkScrolledWindow">
-        <property name="width_request">150</property>
         <property name="visible">True</property>
         <property name="can_focus">True</property>
         <property name="shadow_type">in</property>
@@ -192,15 +118,19 @@ Martin Pruscha</property>
         </child>
       </object>
       <packing>
-        <property name="expand">False</property>
+        <property name="expand">True</property>
         <property name="fill">True</property>
-        <property name="position">2</property>
+        <property name="position">1</property>
       </packing>
+    </child>
+    <child>
+      <placeholder/>
     </child>
   </object>
   <object class="GtkWindow" id="window">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">canviewerPy</property>
+    <property name="window_position">center</property>
     <property name="icon">icon.png</property>
     <child>
       <placeholder/>
@@ -277,64 +207,6 @@ Martin Pruscha</property>
                     </child>
                   </object>
                 </child>
-              </object>
-            </child>
-            <child>
-              <object class="GtkMenuItem">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">_Bearbeiten</property>
-                <property name="use_underline">True</property>
-                <child type="submenu">
-                  <object class="GtkMenu">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <child>
-                      <object class="GtkImageMenuItem">
-                        <property name="label">gtk-cut</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkImageMenuItem">
-                        <property name="label">gtk-copy</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkImageMenuItem">
-                        <property name="label">gtk-paste</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkImageMenuItem">
-                        <property name="label">gtk-delete</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
-                      </object>
-                    </child>
-                  </object>
-                </child>
-              </object>
-            </child>
-            <child>
-              <object class="GtkMenuItem">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">_Ansicht</property>
-                <property name="use_underline">True</property>
               </object>
             </child>
             <child>
@@ -532,6 +404,50 @@ Martin Pruscha</property>
             <property name="fill">True</property>
             <property name="position">2</property>
           </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkAboutDialog" id="about_dialog">
+    <property name="can_focus">False</property>
+    <property name="resizable">False</property>
+    <property name="window_position">center</property>
+    <property name="destroy_with_parent">True</property>
+    <property name="type_hint">dialog</property>
+    <property name="deletable">False</property>
+    <property name="attached_to">window</property>
+    <property name="program_name">canviewerPy</property>
+    <property name="version">0.1.0</property>
+    <property name="copyright" translatable="yes">This software is the property of the E-Cap Mobility GmbH and Tim Lucas Sabelmann</property>
+    <property name="comments" translatable="yes">A program to show CAN bus messages in real-time</property>
+    <property name="website">https://ecap-mobility.com</property>
+    <property name="website_label" translatable="yes">E-Cap Mobility GmbH</property>
+    <property name="authors">Tim Lucas Sabelmann
+Martin Pruscha</property>
+    <property name="documenters">Tim Lucas Sabelmann</property>
+    <property name="logo">ecap_logo.svg</property>
+    <property name="license_type">mit-x11</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
         </child>
       </object>
     </child>

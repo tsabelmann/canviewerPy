@@ -41,7 +41,7 @@ Martin Pruscha
         <property name="toolbar_style">icons</property>
         <property name="icon_size">5</property>
         <child>
-          <object class="GtkToolButton" id="start_treeview">
+          <object class="GtkToolButton" id="start_treeview_button">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="stock_id">gtk-media-play</property>
@@ -52,7 +52,7 @@ Martin Pruscha
           </packing>
         </child>
         <child>
-          <object class="GtkToolButton" id="stop_treeview">
+          <object class="GtkToolButton" id="stop_treeview_button">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="stock_id">gtk-media-stop</property>
@@ -66,7 +66,6 @@ Martin Pruscha
           <object class="GtkSeparatorToolItem">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="is_important">True</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -74,21 +73,10 @@ Martin Pruscha
           </packing>
         </child>
         <child>
-          <object class="GtkToolButton" id="start_recording">
+          <object class="GtkToolButton" id="clear_treestore_button">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="stock_id">gtk-media-record</property>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="homogeneous">True</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkToolButton" id="stop_recording">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="stock_id">gtk-stop</property>
+            <property name="stock_id">gtk-delete</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -108,7 +96,7 @@ Martin Pruscha
         <property name="can_focus">True</property>
         <property name="shadow_type">in</property>
         <child>
-          <object class="GtkTreeView">
+          <object class="GtkTreeView" id="treeview">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <child internal-child="selection">

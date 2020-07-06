@@ -68,9 +68,9 @@ class MainWindow(Gtk.Window):
     def add_tab(self, widget):
         num = -1
         if self.add_tab_entry.get_text():
-            tab  = TabBox()
-            text = self.add_tab_entry.get_text()
-            num  = self.notebook.insert_page(tab, Gtk.Label(text), -1)
+            label = self.add_tab_entry.get_text()
+            tab  = TabBox(label=label)
+            num  = self.notebook.insert_page(tab, tab.label, -1)
 
         # if num != -1:
         #     page = self.notebook.get_nth_page(num)

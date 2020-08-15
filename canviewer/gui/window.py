@@ -1,7 +1,6 @@
 # Import C
 from canviewer.gui import GLADE_UI_PATH
 from canviewer.gui import Gtk
-
 from canviewer.gui.dialogs import AboutDialog
 
 

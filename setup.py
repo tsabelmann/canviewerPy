@@ -1,3 +1,6 @@
+# Import C
+from canviewer.version import VERSION
+
 # Import S
 import setuptools
 
@@ -14,10 +17,10 @@ with open("README.md", "r") as fh:
 
 # setup
 setuptools.setup(
-    name="canviewerPy", # Replace with your own username
-    version="0.1.0",
+    name="canviewerPy",
+    version=VERSION,
     author="Tim Lucas Sabelmann",
-    author_email="tsa@ecap-mobility.com",
+    author_email="tim.sabelmann@hotmail.de",
     description="Program, that shows can messages",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -36,7 +39,7 @@ setuptools.setup(
     py_modules=["main"],
     entry_points={
         "console_scripts" : [
-            "canviewerPy = main:main"
+            "canviewerPy = main:cli"
         ]
     }
 )

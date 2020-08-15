@@ -1,6 +1,7 @@
 # Import C
 from canviewer.version import VERSION
 
+
 # Import S
 import setuptools
 

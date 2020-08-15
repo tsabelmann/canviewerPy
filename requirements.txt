@@ -2,8 +2,8 @@ aenum==2.2.3
 bitstruct==8.11.0
 can==0.0.0
 cantools==34.3.0
+click==7.1.2
 diskcache==4.1.0
-pycairo==1.19.1
 PyGObject==3.36.1
 python-can==3.3.3
 textparser==0.23.0

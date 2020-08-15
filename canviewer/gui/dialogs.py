@@ -1,7 +1,7 @@
 from canviewer.gui import GLADE_UI_PATH
 from canviewer.gui import Gtk
 
-class EcapAboutDialog(Gtk.AboutDialog):
+class AboutDialog(Gtk.AboutDialog):
     def __new__(cls, *args, **kwargs):
         try:
             builder = Gtk.Builder()

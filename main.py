@@ -1,21 +1,5 @@
-# Import c
-import click
-
-from canviewer.gui import Gtk
-from canviewer.gui.window import MainWindow
-
-
-@click.group()
-def cli():
-    pass
-
-
-def main():
-    window = MainWindow()
-    window.connect("destroy", Gtk.main_quit)
-    window.show_all()
-    Gtk.main()
-
+"""Entry point if one wants to execute the program as a script.
+"""
 
 if __name__ == "__main__":
-    cli()
+    pass

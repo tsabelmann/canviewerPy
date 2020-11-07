@@ -1,12 +1,6 @@
+# Idea
+.idea
+
 # Python
-*.pyc
+.venv
 __pycache__
-
-
-# Pipfile
-Pipfile
-Pipfile.lock
-
-
-# Glade
-*.glade~

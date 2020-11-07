@@ -60,6 +60,14 @@ python-can = ">=2.2.0"
 textparser = ">=0.21.1"
 
 [[package]]
+name = "click"
+version = "7.1.2"
+description = "Composable command line interface toolkit"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[[package]]
 name = "colorama"
 version = "0.4.4"
 description = "Cross-platform colored terminal text."
@@ -224,7 +232,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8 <3.10"
-content-hash = "f9d011e5cc1aa2f98b235a079784275c9b2a3e41b1780fccf20a9ba0e0cef3e5"
+content-hash = "c7a2accc32d0ede0623aa431e1cf69e693e92316fe5d4f231b0a5d87f11770d0"
 
 [metadata.files]
 aenum = [
@@ -249,6 +257,10 @@ bitstruct = [
 cantools = [
     {file = "cantools-35.3.0-py2.py3-none-any.whl", hash = "sha256:bf616c972f6bfd39af50c0c6fa33d5e05ecb0ea56a4e971e90658d7700517b9b"},
     {file = "cantools-35.3.0.tar.gz", hash = "sha256:5e3a6f679ad3dcb31142e388e052187d5fc5bd481c4fc3b2791eaa1e681cca98"},
+]
+click = [
+    {file = "click-7.1.2-py2.py3-none-any.whl", hash = "sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"},
+    {file = "click-7.1.2.tar.gz", hash = "sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"},
 ]
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},

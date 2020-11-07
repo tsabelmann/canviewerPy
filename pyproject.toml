@@ -2,7 +2,7 @@
 name = "canviewer"
 version = "0.1.0"
 description = "Tool that allows the live inspection of can-messages"
-authors = ["Tim Lucas Sabelmann"]
+authors = ["Tim Lucas Sabelmann", "Martin Pruscha"]
 license = "MIT"
 
 [tool.poetry.dependencies]

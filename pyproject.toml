@@ -10,6 +10,7 @@ python = ">=3.8 <3.10"
 PySide2 = "^5.15.1"
 python-can = "^3.3.4"
 cantools = "^35.3.0"
+click = "^7.1.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.1.2"
